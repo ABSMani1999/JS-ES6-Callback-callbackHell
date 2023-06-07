@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Callback-callback hell</title>
+        <meta charset ="utf-8">
+		<meta name="description" content=""/>
+		<meta name="keywords" content="HTML,CSS,Java script"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    </head>
+    <body>
+        <script>
+            //callback
+                function call (a,b,c){
+                    c(a,b);
+                }
+                call(100,200,back);
+                function back(x,y){
+                    console.log(x+y);
+                }
+                
+            //callback hell
+                function user(a,b){
+                b(a,2,user2);
+                }
+                user(5,user1);
+                function user1(x,y,z){
+                z(x,y)
+                }
+                function user2(u,w){
+                console.log(u+w);
+                }
+        </script>
+    </body>
+</html>
